@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import "github.com/gofiber/fiber/v2"
 
-func main(){
+func main() {
+    app := fiber.New()
 
-var firstVar1 = "hello there!"
+    app.Get("/", func(c *fiber.Ctx) error {
+        return c.SendString("Hello, World 👋!")
+    })
 
-fmt.Println(firstVar1)
+   app.Listen("localhost:8080")
 }
