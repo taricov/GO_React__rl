@@ -1,10 +1,10 @@
 package models
 
-//import ""
+//import "gorm.io/gorm"
 
 type User struct {
-Id 			uint
+Id 		uint
 Name 		string
-Email 		string 
-Password 	string
+Email 		string  `gorm:"unique"` 
+Password 	[]byte
 }

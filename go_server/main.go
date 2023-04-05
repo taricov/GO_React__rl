@@ -1,9 +1,10 @@
 package main
 
 import (
-"go_server/database"
-"go_server/routes"
-"github.com/gofiber/fiber/v2"
+	"go_server/database"
+	"go_server/routes"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
